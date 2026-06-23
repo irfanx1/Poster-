@@ -37,12 +37,15 @@ async def receive_custom_title(client, message, session):
 async def ask_poster_choice(client, message, session):
     session.step = Step.POSTER_CHOICE
     markup = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🖼 Official Poster", callback_data="poster:official"),
-         InlineKeyboardButton("📤 Upload Custom Poster", callback_data="poster:custom")],
-        [InlineKeyboardButton("❌ Cancel", callback_data="cancel")],
+        [InlineKeyboardButton("🖼 Usᴇ Oғғɪᴄɪᴀʟ Pᴏsᴛᴇʀ", callback_data="poster:official"),
+         InlineKeyboardButton("📤 Uᴘʟᴏᴀᴅ Cᴜsᴛᴏᴍ Pᴏsᴛᴇʀ", callback_data="poster:custom")],
+        [InlineKeyboardButton("❌ Cᴀɴᴄᴇʟ", callback_data="cancel")],
     ])
     await client.send_message(
         chat_id=message.chat.id,
-        text="Now, do you want to use the **official poster/cover** or **upload your own image**?",
+        text="<b><blockquote>⟡ TITLE CHOICE ❞</b></blockquote>"
+"<b><blockquote\n◇ Would you like to use the official title from AniList/TMDb, or set your own custom title? ❞
+\n◇ (This title will appear on the poster and in the caption) ❞
+\n◇ Query : session.selected["title"]❞?</b></blockquote>",
         reply_markup=markup,
     )
