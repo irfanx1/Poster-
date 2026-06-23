@@ -6,9 +6,9 @@ load_dotenv()
 
 class Config:
     # --- Telegram credentials (get API_ID/API_HASH from my.telegram.org) ---
-    API_ID = int(os.environ.get("API_ID", "0"))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    API_ID = int(os.environ.get("API_ID", "39407537"))
+    API_HASH = os.environ.get("API_HASH", "5bd2e83dd1227da3f38c966d1d46d9ae")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8949977049:AAGpJNVCjYGt7cBosHqyenaFiX4DUvBqTqs")
 
     # --- MyAnimeList search via Jikan (unofficial MAL API, no auth needed) ---
     JIKAN_BASE_URL = "https://api.jikan.moe/v4"
