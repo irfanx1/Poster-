@@ -43,9 +43,8 @@ async def ask_poster_choice(client, message, session):
     ])
     await client.send_message(
         chat_id=message.chat.id,
-        text="<b><blockquote>⟡ TITLE CHOICE ❞
+        text= "<b><blockquote>⟡ TITLE CHOICE ❞<b></blockquote>
 \n◇ Would you like to use the official title from AniList/TMDb, or set your own custom title? ❞
-\n◇ (This title will appear on the poster and in the caption) ❞
-\n◇ Query : session.selected["title"] ❞?</b></blockquote>",
+\n◇ (This title will appear on the poster and in the caption) ❞?",
         reply_markup=markup,
     )
